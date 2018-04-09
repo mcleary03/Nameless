@@ -11,11 +11,12 @@ storiesOf('Btn', module)
   .add( 'Default Btn', () => <Btn>click me!</Btn> )
   .add('Hovered Btn', () => <Btn hover> click me! </Btn>)
   .add('Clicked Btn', () => <Btn hover click> click me! </Btn>)
+  .add('Glass Btn', () => <Btn color={'glass'} style={{width: '400px', height: '200px'}}> click me! </Btn>)
   .add('All color schemes', () => (
     <div> 
       <Btn color={'glass'}>glass</Btn>
-      <Btn color={'white'}>white</Btn>
       <Btn>default</Btn>
+      <Btn color={'lightblue'}>lightblue</Btn>
       <Btn color={'blue'}> blue </Btn>
       <Btn color={'green'}>green</Btn>
       <Btn color={'yellow'}>yellow</Btn>
@@ -25,9 +26,9 @@ storiesOf('Btn', module)
   ))
 
 storiesOf('Modified Btn', module)
-  .add( 'Btn with event', () => <Btn onclick={alertEvent} color='orange'>click me!</Btn> )
+  .add( 'Btn with event', () => <Btn onClick={alertEvent} color='orange'>click me!</Btn> )
   
-  .add( 'Btn with caps prop', () => <Btn onclick={alertEvent} color='orange' caps>click me!</Btn> )
+  .add( 'Btn with caps prop', () => <Btn color='orange' caps>click me!</Btn> )
   
   .add( 'Btn custom style', () => (
     <Btn 
