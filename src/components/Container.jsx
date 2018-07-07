@@ -21,21 +21,14 @@ export default class Container extends Component {
       position: 'relative',
       top: 0,
       bottom: 0,
-      // margin: '20px 15%',
       padding: '12px',
       display: 'grid',
-      // gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-      // gridTemplateRows: 'repeat(auto-fit, minmax(200px, 1fr))',
-      // gridTemplateAreas: `${template}` || 'none',
       gridColumnGap: gap || 'none',
       gridRowGap: gap || 'none',
       justifyItems: 'center',
       alignItems: 'start',
-      // justifyContent: 'space-evenly',
-      // alignContent: 'space-around',
-      // border: props.border ? `1px solid ${border}` : 'none',
+      justifyContent: 'space-around',
       borderBottom: props.border ? `1px solid ${border}` : 'none',
-      borderRadius: '10px',
       backgroundColor: fill ? typeof fill==='string' ? fill : background : 'white',
       boxShadow: `inset 0 0 5px ${inset}`,
       filter: props.border ? `drop-shadow(0 3px 5px ${shadow})` : 'none',
@@ -43,10 +36,6 @@ export default class Container extends Component {
       ...style // override defaults with inline style object
     }
   } // end constructor
-
-  // static getDerivedStateFromProps(nextProps, prevState) {
-  //   setTimeout(()=>{console.log('getDerivedStateFromProps')},2000)
-  // }
   
   componentDidMount() {
     console.log(`${this.props.template}`)

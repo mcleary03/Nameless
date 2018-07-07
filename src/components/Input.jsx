@@ -33,7 +33,9 @@ export default class Input extends Component {
 
     this.focusStyle = {
       ...this.defaultStyle,
-      filter: `drop-shadow(0 1px 3px ${green.shadow})`,
+      // filter: `drop-shadow(0 1px 3px ${green.shadow})`,
+      outline: 'none',
+      boxShadow: `0 0 0 0.2rem rgba(0, 134, 245, 0.4)`,
       background: 'blue'
     }
     this.errorStyle = {
@@ -88,15 +90,17 @@ export default class Input extends Component {
     const { error, success, warning, focus } = this.state
     const { errorStyle, successStyle, warningStyle, focusStyle, defaultStyle } = this
 
-    return error ?
-      errorStyle :
-        success ?
-          successStyle :
-          warning ?
-            warningStyle :
-            focus ?
-              focusStyle :
-              defaultStyle
+    return (
+      focus ?
+        focusStyle :
+      error ?
+        errorStyle :
+      success ?
+        successStyle :
+      warning ?
+        warningStyle :
+      defaultStyle
+    )
   }
   
   render() {

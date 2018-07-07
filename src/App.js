@@ -7,32 +7,41 @@ import Input from './components/Input'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Container border gap='10px' template="'right right left' '. main main'">
-          <Col gap='10px' area='main'>
+      <div className="App" style={{backgroundColor: '#000'}}>
+        <Container gap='10px'>
+          <Col gap='10px'>
+            <h1>Col 1</h1>
             <Btn caps>click</Btn>
             <Btn color='yellow' bold caps>click me!</Btn>
             <Btn color='red' caps>click me!</Btn>
           </Col>
-          <Col gap='10px' area='left'>
+          <Col gap='10px'>
+            <h1>Col 2</h1>
             <Btn color='green' bold caps>click me!  please click me, I want to be clicked...</Btn>
           </Col>
-          <Col gap='10px' area='right'>
-            <Btn color='glass' style={{width: '100px', height: '70px'}}> click me! </Btn>
+          <Col gap='10px'>
+            <h1>Col 3</h1>
+            <Btn color='glass'> click me! </Btn>
             <Input/>
           </Col>
         </Container>
-        <Container border gap='10px'>
-          <Col gap='10px'>
+
+        <Container 
+          gap='10px' 
+          template="'col3 col3 col2' '. col1 col1'">
+          <Col gap='10px' area='col1'>
+            <h1>Col 1</h1>
             <Btn caps>click</Btn>
             <Btn color='yellow' bold caps>click me!</Btn>
             <Btn color='red' caps>click me!</Btn>
           </Col>
-          <Col gap='10px'>
+          <Col gap='10px' area='col2'>
+            <h1>Col 2</h1>
             <Btn color='green' bold caps>click me!  please click me, I want to be clicked...</Btn>
           </Col>
-          <Col gap='10px'>
-            <Btn color='glass' style={{width: '100px', height: '70px'}}> click me! </Btn>
+          <Col gap='10px' area='col3'>
+            <h1>Col 3</h1>
+            <Btn color='glass'> click me! </Btn>
             <Input/>
           </Col>
         </Container>

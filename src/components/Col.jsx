@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import gridType from '../scripts/gridType'
 
 export default class Col extends Component {
   constructor(props) {
@@ -15,27 +16,13 @@ export default class Col extends Component {
       boxSizing: 'border-box',
       padding: '2% 10%',
       display: 'grid',
-      // gridTemplateRows: 'repeat(auto-fit, 1fr)',
-      // gridArea: area || 'none',
       gridRowGap: gap || 'none',
       justifyItems: 'center',
       alignItems: 'start',
-      ...this.colType(props),
+      ...gridType(props),
       ...style // override defaults with inline style object
     }
   } // end constructor
-
-  colType = props => {
-    if (props.area) {
-      return {
-        gridArea: props.area
-      }
-    } else {
-      return {
-        gridTemplateRows: 'repeat(auto-fit, 1fr)',
-      }
-    }
-  }
 
   componentDidMount() {
     
