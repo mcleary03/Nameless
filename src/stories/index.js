@@ -11,17 +11,17 @@ storiesOf('Btn', module)
   .add( 'Default Btn', () => <Btn>click me!</Btn> )
   .add('Hovered Btn', () => <Btn hover> click me! </Btn>)
   .add('Clicked Btn', () => <Btn hover click> click me! </Btn>)
-  .add('Glass Btn', () => <Btn color={'glass'} style={{width: '400px', height: '200px'}}> click me! </Btn>)
+  .add('Glass Btn', () => <Btn color='glass' style={{width: '400px', height: '200px'}}> click me! </Btn>)
   .add('All color schemes', () => (
     <div> 
-      <Btn color={'glass'}>glass</Btn>
+      <Btn color='glass'>glass</Btn>
       <Btn>default</Btn>
-      <Btn color={'lightblue'}>lightblue</Btn>
-      <Btn color={'blue'}> blue </Btn>
-      <Btn color={'green'}>green</Btn>
-      <Btn color={'yellow'}>yellow</Btn>
-      <Btn color={'orange'}>orange</Btn> 
-      <Btn color={'red'}>red</Btn>
+      <Btn color='lightblue'>lightblue</Btn>
+      <Btn color='blue'> blue </Btn>
+      <Btn color='green'>green</Btn>
+      <Btn color='yellow'>yellow</Btn>
+      <Btn color='orange'>orange</Btn> 
+      <Btn color='red'>red</Btn>
     </div>
   ))
 
@@ -53,7 +53,7 @@ storiesOf('Modified Btn', module)
       background: 'magenta',
       border: 'aqua',
       shadow: 'blue',
-      inset: 'green',
+      inset: 'darkblue',
       text: 'gold'
     }}>click me!</Btn>
   ))
